@@ -7,6 +7,11 @@ public class Guerrero{
 	public void atacar() {
 		System.out.println("Argggggg!! soy " + nombre);
 		arma.usar();//polimorfismo
+		if(getArma() instanceof Arco) {
+			System.out.println("Estoy atacando con un arco");
+		}else if(getArma() instanceof Espada) {
+			System.out.println("Estoy atacando con una esapda");
+		}
 	}
 
 	public String getNombre() {
