@@ -62,6 +62,9 @@ public class Main {
 		
 		p3.getDireccion().setCiudad("Roma");
 		System.out.println(d1.getCiudad());
+		
+		Object o = p3;
+		System.out.println(o.toString());
 	}
 	
 	public static void cambiarEdad(Persona p) {
