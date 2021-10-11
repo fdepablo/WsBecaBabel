@@ -1,0 +1,8 @@
+Quiero que creeis una entidad coche con los siguientes atributos
+Id, marca, modelo, numero km
+
+Quiero que hagais un CRUD a base de datos cada uno en un main
+diferente (es decir replicar lo que tengo yo hecho con la persona
+pero con un coche)
+
+Subirlo al Github como proyecto Ej03CocheCrud

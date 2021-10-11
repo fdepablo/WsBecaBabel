@@ -16,15 +16,19 @@ public class _02_InsertarPreparedStatement {
 		String pass = "";
 		
 		// Paso 2: Interactuar con la BD 
+		// try-catch-resource statement. Esto nos ahorra codigo en java ya que
+		// los objetos que creemos dentro de los parentesis del try, se ejecutara
+		// su metodo close() siempre, cuando salgamos del bloque try-catch, es decir
+		// no haría falta poner el bloque finally cerrando las conexiones
 		try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass)){
 			//esta es la manera que hay que hacer si quereis aprobar
 			//porque? De momento ganamos en claridad, es mas visual
 			String sql = "INSERT INTO PERSONAS (NOMBRE, EDAD, PESO) VALUES (?, ?, ?)"; 
 			// en vez de poner los valores ponemos interrogantes
 			
-			String nombre = "Ernion Güeslei";
-			int edad = 18;
-			double peso = 46;
+			String nombre = "Ron primer";
+			int edad = 20;
+			double peso = 56;
 			
 			System.out.println("Se va a ejecutar la siguiente sentencia SQL:");
 			System.out.println(sql);
@@ -42,6 +46,7 @@ public class _02_InsertarPreparedStatement {
 			int afectados = sentencia.executeUpdate();
 			System.out.println("Sentencia SQL ejecutada con éxito");
 			System.out.println("Registros afectados: "+afectados);
+			//con.close()
 		} catch (SQLException e) {
 			System.out.println("Error al añadir una nueva persona");
 			System.out.println(e.getMessage());

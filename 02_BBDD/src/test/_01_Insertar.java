@@ -12,11 +12,13 @@ public class _01_Insertar {
 		String user = "root";
 		String pass = "";
 		
+		 Connection con = null;
 		// Paso 2: Interactuar con la BD 
-		try (Connection con = DriverManager.getConnection(cadenaConexion, user, pass)){
-			String nombre = "Harry Potter";
-			int edad = 17;
-			double peso = 48.9;
+		try{
+			con = DriverManager.getConnection(cadenaConexion, user, pass);
+			String nombre = "Ernion Güesley";
+			int edad = 19;
+			double peso = 44.5;
 			
 			//Esta menera NO se debe usar nunca, se debe usar SIEMPRE
 			//preparedStatement, lo vemos solo para fines didacticos
@@ -27,7 +29,7 @@ public class _01_Insertar {
 			System.out.println(sql);
 			
 			//siguiente paso es mandar la query a traves de la conexión
-			Statement sentencia;//esta clase no se debe usar, el que la use en las practicas esta suspenso
+			Statement sentencia;//esta clase NO se debe usar, el que la use en las practicas esta suspenso
 			sentencia = con.createStatement();
 			//Ejecutamos la query, y nos devuelve las filas afectadas (dadas de alta)
 			int filasAfectadas = sentencia.executeUpdate(sql);
@@ -38,6 +40,15 @@ public class _01_Insertar {
 			System.out.println("Error al añadir una nueva persona");
 			System.out.println(e.getMessage());
 			e.printStackTrace();
+		} finally {
+			if(con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 		
 	}
