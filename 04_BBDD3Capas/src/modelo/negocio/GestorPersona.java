@@ -5,7 +5,7 @@ import java.util.List;
 import modelo.entidad.Persona;
 //import modelo.persistencia.PersonaDaoDerby;
 import modelo.persistencia.PersonaDaoMySql;
-import modelo.persistencia.interfaces.PersonaDao;
+import modelo.persistencia.interfaces.DaoPersona;
 
 //Aquí irian todas las reglas de negocio de nuestra aplicacion, se aplicarian
 //antes de llamar a la BBDD. Por ejemplo si la persona tiene que tener al
@@ -16,7 +16,7 @@ public class GestorPersona {
 	//Aqui podemos jugar con cambiar el dao que queremos usar
 	//podemos usar PersonaDaoDerby o PersonaDaoMySql
 	//Gracias a las interfaces solo tenemos que cambiar el objeto
-	PersonaDao personaDao = new PersonaDaoMySql();
+	DaoPersona personaDao = new PersonaDaoMySql();
 	
 	public boolean alta(Persona p){
 		//aplicamos la regla de negocio

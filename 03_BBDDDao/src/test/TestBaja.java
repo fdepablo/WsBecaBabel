@@ -7,7 +7,7 @@ public class TestBaja {
 	public static void main(String[] args) {
 		DaoPersona dp = new DaoPersonaMySql();
 		
-		boolean baja = dp.baja(11);
+		boolean baja = dp.baja(3);
 		if(baja){
 			System.out.println("La persona se ha dado de baja");
 		}else{

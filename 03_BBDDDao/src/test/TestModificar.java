@@ -7,7 +7,7 @@ import modelo.persistencia.interfaces.DaoPersona;
 public class TestModificar {
 	public static void main(String[] args) {
 		Persona persona = new Persona();
-		persona.setId(10);
+		persona.setId(5);
 		persona.setNombre("Mortadelo");
 		persona.setEdad(40);
 		persona.setPeso(73.5);

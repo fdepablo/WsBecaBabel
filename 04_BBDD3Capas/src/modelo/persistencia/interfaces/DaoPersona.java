@@ -4,7 +4,7 @@ import java.util.List;
 
 import modelo.entidad.Persona;
 
-public interface PersonaDao {
+public interface DaoPersona {
 	boolean alta(Persona p);
 	boolean baja(int id);
 	boolean modificar(Persona p);

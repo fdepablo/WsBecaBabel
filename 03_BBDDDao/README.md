@@ -1,6 +1,6 @@
 # Configuracion
 
-Para probar este ejemplo mirar el ejemplo anterior "10_BBDD" para configurar la BBDD
+Para probar este ejemplo mirar el ejemplo anterior "03_BBDD" para configurar la BBDD
 Tambien esta preparado para que sea lanzado con una bbdd derby, tanto embebida como
 configurada como proceso
 
