@@ -19,6 +19,8 @@ Como reglas de negocio nos dices que:
 Negocio debería de proporcionar a la vista una respueta adecuada
 para cada una de las reglas de negocio que no se han cumplido.
 
+Subirlo al Github como proyecto Ej04CocheCapas
+
 
 
 
