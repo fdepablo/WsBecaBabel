@@ -1,0 +1,21 @@
+Ejercicio en el que pidamos 3 numeros por pantalla a nuestro usuario
+y calculemos si son primos o no. 
+
+Debido al posible alto coste de tiempo, debemos de abrir un hilo
+por cada numero que queremos calcular.
+
+Se pide hacer el programa implementando una de las dos maneras
+que hemos visto (Thread o Runnable)
+
+Se pide calcular el tiempo de procesamiento que ha tardado cada hiloen 
+el calculo de saber si el numero es primo o no.
+
+
+
+
+
+
+
+
+
+
