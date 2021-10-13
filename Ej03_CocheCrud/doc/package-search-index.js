@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"modelo.entidad"},{"l":"modelo.negocio"},{"l":"modelo.persistencia"},{"l":"vista"}]

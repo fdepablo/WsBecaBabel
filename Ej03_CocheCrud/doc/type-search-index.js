@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"modelo.entidad","l":"Coche"},{"p":"modelo.persistencia","l":"CocheDaoMySql"},{"p":"modelo.persistencia","l":"DaoCoche"},{"p":"modelo.negocio","l":"GestorCoche"},{"p":"vista","l":"Main"}]
