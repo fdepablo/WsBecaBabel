@@ -1,1 +1,1 @@
-Esto es una prueba de impresion
+Esto es una cadena escrita con una clase anonima
