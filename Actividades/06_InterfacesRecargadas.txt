@@ -1,0 +1,45 @@
+
+Vamos a suponer que tenemos 4 entidades.
+
+Motos
+Coches
+Barcos
+Aviones
+
+Todos los vehiculos tienen un id, unos caballos de potencia y
+un nombre.
+
+Queremos tener una interfaz que se "Movible" que va a tener un
+metodo que por defecto haga que todos los objetos que implementen
+dicha interfaz haga que dichos objetos se muevan una distancia
+X. Este será el comportamiento por defecto de las motos y los
+coches.
+
+Ahora, los barcos y los aviones se van a mover de manera diferente
+, en este caso los barcos se van a mover por el agua y 
+los aviones por el aire(simplemente decirlo por pantalla), pero 
+además el numero de metros que se van a mover va a estar condicionado
+a la potencia que tenga.
+
+Los barcos se moveran un numero de metros igual al numero de metros pasado
+por parametro + la potencia *2
+
+Los aviones se moveran un numero de metros igual al numero de metros pasado
+por parametro + la potencia * 3
+ 
+Se pide crear un vehiculo de cada tipo, meterlos en un array y recorrerlo
+para que se muevan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
