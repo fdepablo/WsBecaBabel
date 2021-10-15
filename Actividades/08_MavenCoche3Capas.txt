@@ -1,0 +1,21 @@
+Hagais el ejercicio 04 pero creando el programa con maven
+
+Quiero que hagamos un instalador de la aplicacion y pasemos test
+unitarios sobre las clases siguientes:
+
+	1- Test sobre el dao
+	2- Test sobre negocio
+	
+Podeis basaros en este ejercicio para mas información
+
+https://github.com/fdepablo/WorkspaceJava/tree/master/21_JUnit5
+
+
+
+
+
+
+
+
+
+

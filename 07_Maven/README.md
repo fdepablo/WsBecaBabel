@@ -61,6 +61,16 @@ Entre las carpetas y paquetes más importantes encontraermos:
 4) Una vez configurado el fichero pom.xml, podemos empezar a realizar nuestro proyecto, normalmente
 en src/main/java. Para este ejemplo hemos usado la libreria de pdf que hemos añadido a nuestras
 dependencias. Ver el fichero pom.xml para ver más detalles de donfiguración.
+
+## Fases de maven y ejecutables
+
+Un proyecto maven lo podemos dividir en diferentes etapas (podemos encontrarlas en boton drecho sobre el proyecto "run us...", las más importantes:
+
+1. Maven install. Esta fase hace una construccion de la aplicacion, aplicando primero una compilacion, luego una fase de test (Maven test) y luego una fase geracion de ejecutables. Se crean los ejecutables dentro de la carpeta "target"
+2. Maven test. Pasamos los test unitarios que estan la carpeta src/test/java
+3. Maven clean. Borra la instalacion previa.
+
+
 	
 	
 Bibliografia
