@@ -1,0 +1,18 @@
+Hagais el ejercicio 04 pero creando el programa con maven
+
+Vamos a meterla al menu otra opcion que va a ser:
+
+	6- Exportar BBDD. 
+	
+Quiero que exporteis la bbdd a algun sistema de ficheros 
+con alguna librería que os bajes, por ejemplo PDF, CSV o Excel
+
+
+
+
+
+
+
+
+
+
