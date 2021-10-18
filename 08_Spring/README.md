@@ -42,4 +42,16 @@ Tenemos que bajarnos la librerías con el contexto de spring. Normalmente haremo
 		</dependency>
 	  	
 	  </dependencies>
+	  
+Tambien se recomienda tener el plugin de eclipse llamado "Spring Tools 4" que se puede bajar del marketplace de Eclips -> help | Eclipse Marketplace
+
+## Ejemplos spring
+
+En este proyecto tenemos diferentes ejemplos sobre los distintos casos de dar de alta el contexto de aplicacion por XML y los beans (objetos spring) por XML.
+
+Cada ejemplo es independient de los demás.
+
+
+
+
 ​

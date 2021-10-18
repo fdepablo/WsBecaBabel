@@ -1,0 +1,37 @@
+Queremos dar diferentes objetos de alta en nuestro contexto de spring
+partiendo de las siguientes clases.
+
+1- Clase Superheroe, con id, nombre, nombre de super heroe,
+poder(numerico) y super poder.
+
+A partir de esta clase queremos dar de alta 3 superheroes fijos en spring, 
+que sean unicos para toda la aplicacion (valores a elegir)
+
+Tambien dar 2 super heroes en spring como plantilla para crear diferentes 
+supeheroes a demanda en nuestra aplicacion. Uno de ellos tendra la 
+potencia por defecto establecida a 100, el otro tendrá como super poder 
+por defecto de "volar"
+
+Queremos tener 2 listar para guardar super heroes de ambos tipos en el contexto
+
+La app mostrará el siguiente menu:
+
+1- Acceder a los 3 super hereos 
+2- Add super heroe con potencia 100 a su lista (pedira los datos al usuario)
+3- Add super heroe que pueda volar a su lista (pedira los datos al usuario)
+4- Listar super heroes con potencia 100
+5- Listar super heroes que puedan volar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
