@@ -7,9 +7,9 @@ import persistencia.DaoCocheMysql;
 import persistencia.interfaz.DaoCoche;
 
 public class GestorCoche {
-	private DaoCoche cocheDao = null;
-	private CochesToExcel cte = null;
-	private CochesToPdf ctp = null;
+	private DaoCoche cocheDao = new  DaoCocheMysql();
+	private CochesToExcel cte = new CochesToExcel();
+	private CochesToPdf ctp = new CochesToPdf();
 	
 	public boolean alta(Coche c){
 		if(c.getMatricula().length() == 7
