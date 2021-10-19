@@ -1,0 +1,6 @@
+Quiero que repitais la actividad 01, pero con Spring.
+
+Quiero que deis de alta todo el ordenador en el fichero xml.
+
+En el main solo tendremos que pedirle el objeto ordenador por
+el id que hayamos establecido, y pintar los datos (3 lineas el main)
