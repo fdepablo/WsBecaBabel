@@ -2,6 +2,7 @@ package ejemplo07;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,32 +10,61 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringMain7 {
 	public static ApplicationContext context = null;
 		
-	static {
-		context = 
-				new ClassPathXmlApplicationContext("beans07.xml");
-	}
 	public static void main(String[] args) {
+		
+		context = new ClassPathXmlApplicationContext("applicationContext07.xml");
+		
 		List<String> listaNombres = 
 				context.getBean("listaNombres",List.class);
+		
 		for(String s : listaNombres) {
 			System.out.println(s);
 		}
 		
+		System.out.println("**********************************");
+		List<Persona> listaPersonas = 
+				context.getBean("listaPersonas",List.class);
+		
+		//Podemos recorrear arrays usando expresiones lambda
+		listaPersonas.forEach((v) -> {
+			System.out.println(v);
+		});
+		
+		System.out.println("**********************************");
+		Map<Integer, Persona> mapaPersonas = 
+				context.getBean("mapaPersonas",Map.class);
+		
+		System.out.println(mapaPersonas.get(1));
+		System.out.println(mapaPersonas.get(2));
+		
+		//Podemos usar expresiones lambda para recorrer mapas
+		mapaPersonas.forEach((k,v) -> {
+			System.out.println("Key: " + k + ": Value: " + v);
+		});
+		
+		System.out.println("**********************************");
+		Set<Persona> conjuntoPersonas = 
+				context.getBean("conjuntoPersonas",Set.class);
+		
+		conjuntoPersonas.forEach((v) -> {
+			System.out.println(v);
+		});
+		
+		System.out.println("******** Objeto Colecciones **************");
 		Colecciones colecciones = 
 				context.getBean("colecciones",Colecciones.class);
+
 		
-		for(Persona p : colecciones.getListaPersonas()) {
-			System.out.println(p.getNombre());
-		}
+		colecciones.getListaPersonas().forEach((v) -> {
+			System.out.println(v);
+		});
 		
-		for(String s : colecciones.getConjuntoStrings()) {
-			System.out.println(s);
-		}
+		colecciones.getConjuntoStrings().forEach((v) -> {
+			System.out.println(v);
+		});
 		
-		Map<Integer,Persona> mapaPersonas = 
-				colecciones.getMapaPersonas();
-		
-		System.out.println(mapaPersonas.get(1).getNombre());
-		System.out.println(mapaPersonas.get(2).getNombre());
+		colecciones.getMapaPersonas().forEach((k,v) -> {
+			System.out.println("Key: " + k + ": Value: " + v);
+		});
 	}
 }

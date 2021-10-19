@@ -6,16 +6,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringMain5 {
 	public static ApplicationContext context = null;
 		
-	static {
-		context = 
-				new ClassPathXmlApplicationContext("beans05.xml");
-	}
 	public static void main(String[] args) {
-		Persona paco = context.getBean("personaInner",Persona.class);
-		System.out.println(paco.getNombre());
-		System.out.println(paco.getDireccion().getNombreVia());
+		context = new ClassPathXmlApplicationContext("applicationContext05.xml");
 		
-		Persona otroBean = context.getBean("personaInner2",Persona.class);
+		Persona pepe = context.getBean("personaInner",Persona.class);
+		System.out.println(pepe.getNombre());
+		System.out.println(pepe.getDireccion().getNombreVia());
+		
+		Persona otroBean = context.getBean("persona",Persona.class);
 		System.out.println(otroBean.getNombre());
 		System.out.println(otroBean.getDireccion().getNombreVia());
 	}

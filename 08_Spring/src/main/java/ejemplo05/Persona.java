@@ -17,6 +17,7 @@ public class Persona {
 		this.peso = peso;
 		this.direccion = direccion;
 	}
+	
 	public String getNombre() {
 		return nombre;
 	}
