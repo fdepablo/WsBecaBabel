@@ -5,6 +5,7 @@ public class Persona {
 	private int edad;
 	private double peso;
 	private Direccion direccion;
+	private Ordenador ordenador;
 		
 	public String getNombre() {
 		return nombre;
@@ -31,9 +32,18 @@ public class Persona {
 		this.direccion = direccion;
 	}
 	
+	public Ordenador getOrdenador() {
+		return ordenador;
+	}
+	public void setOrdenador(Ordenador ordenador) {
+		this.ordenador = ordenador;
+	}
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", direccion=" + direccion + "]";
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", direccion=" + direccion
+				+ ", ordenador=" + ordenador + "]";
 	}
+	
+	
 	
 }

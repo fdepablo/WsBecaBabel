@@ -8,7 +8,7 @@ El corazón de Spring Framework es su contenedor de inversión de control (IoC).
 
 En una aplicacion Spring pura, podemos desarrolar todo nuestro codigo sin necesidad de que el programador haga "news" de los objetos, será el contenedor de spring el que haga este trabajo. Nosotros como programadores, programaremos los objetos o las clases pero el control del ciclo de vida de los objetos ser encargara Spring
 
-La inversion de control es un concepto el cual el programador no tiene el control sobre el ciclo de vida del objeto, sino que es otra entidad el que lo tiene (en este caso, spring)
+La inversion de control es un concepto el cual el programador no tiene el control sobre el ciclo de vida del objeto, sino que es otra entidad el que lo tiene (en este caso, Spring)
 
 1. La instanciacion de los objeto corre a cargo de una clase llamada BeanFactory. En principio tenemo tres maneras de dar de alta los objetos en el contexto de spring. 
     - La primera sería a traves de XML
@@ -23,6 +23,12 @@ Los objetos pueden ser obtenidos por búsqueda de dependencias o por inyección 
 
 1. búsqueda de dependencias es un modelo donde se pide al objeto contenedor un objeto con un nombre específico o de un tipo específico, ya que recordemos que los beans en spring no son anonimos como en java. i
 2. inyección de dependencias es un modelo en el que el contenedor pasa objetos por nombre a otros objetos, ya sea a través de métodos constructores, propiedades, o métodos de la fábrica.
+
+## Spring runtime
+
+En la siguiente clase podemos ver los modulos más importantes que intervienen en Spring
+
+![spring runtime](img/spring_runtime.png)
 
 ## Configurar un proyecto Spring
 

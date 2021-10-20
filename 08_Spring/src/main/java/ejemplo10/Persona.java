@@ -6,6 +6,7 @@ public class Persona {
 	private double peso;
 	private boolean casada;
 	private Direccion direccion;
+	private Ordenador ordenador;
 		
 	public String getNombre() {
 		return nombre;
@@ -37,11 +38,18 @@ public class Persona {
 	public void setCasada(boolean casada) {
 		this.casada = casada;
 	}
+
+	public Ordenador getOrdenador() {
+		return ordenador;
+	}
+	public void setOrdenador(Ordenador ordenador) {
+		this.ordenador = ordenador;
+	}
+	
 	@Override
 	public String toString() {
 		return "Persona [nombre=" + nombre + ", edad=" + edad + ", peso=" + peso + ", casada=" + casada + ", direccion="
-				+ direccion + "]";
+				+ direccion + ", ordenador=" + ordenador + "]";
 	}
-	
 	
 }

@@ -5,14 +5,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //https://docs.spring.io/spring/docs/4.3.10.RELEASE/spring-framework-reference/html/expressions.html
 public class SpringMain10 {
+	
 	public static ApplicationContext context = null;
-		
-	static {
-		context = 
-				new ClassPathXmlApplicationContext("beans10.xml");
-	}
 	
 	public static void main(String[] args) {
+		context = 
+				new ClassPathXmlApplicationContext("ApplicationContext10.xml");
+		
 		Persona p = context.getBean("persona",Persona.class);
 		System.out.println(p);
 		
