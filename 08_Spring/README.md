@@ -14,7 +14,9 @@ La inversion de control es un concepto el cual el programador no tiene el contro
     - La primera sería a traves de XML
     - la segunda sería a traves de anotaciones. 
     - La tercera basandonos en objetos Java (desde Spring 3.0)
+
 Cuando nosotros tabajamos con objetos dentro del contexto de Spring, los objetos dejan de ser anonimos y pasan a tener un identificador unico, de tal manera que podemos pedirle al contexto de spring ese objeto siempre que queramos.
+
 2. El lugar donde se van a guardar los objetos, es el ApplicationContext, que podemos darlo de alta a traves de un XML o a traves de anotaciones. El contenedor es unico para toda la aplicacion. El usuario puede usar el formato que desee para dar de alta los ojbetos e incluso mezclarlos en la misma aplicación.​
 
 Los objetos creados y gestionados por el contenedor se denominan objetos gestionados o beans. Estos objetos normalmente son del tipo POJO (Plain Old Java Object), es decir, objeto sencillos que no tienen herencias ni interfaces.

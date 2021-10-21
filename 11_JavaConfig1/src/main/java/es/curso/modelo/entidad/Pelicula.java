@@ -1,25 +1,21 @@
-package modelo.entidades;
+package es.curso.modelo.entidad;
+
+import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value="prototype")
-public class Pelicula {
+@Scope("prototype")
+public class Pelicula implements Serializable{
 	private int id;
-	private String titulo = "La guerra de las galaxias";
+	private String titulo;
 	private String genero;
-	
-	//por defecto autowired es byType y si hay varios objetos del mismo
-	//tipo haria un autowired byName, si no hubiera ninguno, arrojaría
-	//una excepción
+
 	@Autowired
-	//si queremos hacerlo por id utilizaremos la
-	//etiqueta qualifier, ademas de @Autowire
-	@Qualifier("directorBean")
+	@Qualifier(value = "directorBean")
 	private Director director;
 	
 	public int getId() {
@@ -46,10 +42,14 @@ public class Pelicula {
 	public void setDirector(Director director) {
 		this.director = director;
 	}
+	
+	/*
+	 * Esta anotacion funciona en tiempo de compilacion y es una anotacion del tipo "check", es
+	 * decir, lo que hace es comprobar en tiempo de ejecuci�n que efectivamente el metodo EXISTE
+	 * en la clase padre y que lo vamos a sobrescribir
+	 */
 	@Override
 	public String toString() {
 		return "Pelicula [id=" + id + ", titulo=" + titulo + ", genero=" + genero + ", director=" + director + "]";
-	}
-	
-	
+	}	
 }

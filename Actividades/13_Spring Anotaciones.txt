@@ -1,0 +1,21 @@
+
+Vamos a volver a crear el ordenador que creamos en el ejercicio 10 con
+spring, pero esta vez vamos a hacerlo de dos maneras.
+
+1. Dando de alta los objetos por anotaciones principalmente
+2. Dando de alta los objetos totalmente por JavaConfig
+
+#Si quereis estas consideraciones en cuenta...
+
+1. Siempre que podamos haremos autowired (cualquier tipo)
+2. Queremos hacer que los precios sean aleatorios de todos
+los objetos
+3. Queremos que le precio del ordenador sea la suma de todos
+los precios de los objetos que lo compongan
+4. Queremos hacer que las marcas de los productos se genere
+tambien a partir de una clase que devuelva una marca de manera 
+aleatoria.
+5. Crearemos una clase y un objeto que se llame DaoOrdenador
+que tenga un metodo que persista el ordenador en un fichero.
+6. El main invocara el objeto creado y a partir del DaoOrdenador
+persistiremos el objeto en el fichero.

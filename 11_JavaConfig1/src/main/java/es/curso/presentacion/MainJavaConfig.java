@@ -1,21 +1,31 @@
-package presentacion;
-
+package es.curso.presentacion;
 
 import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import modelo.entidades.Pelicula;
-import modelo.negocio.GestorPelicula;
+import es.curso.cfg.ConfiguracionSpring;
+import es.curso.modelo.entidad.Pelicula;
+import es.curso.modelo.negocio.GestorPelicula;
 
-public class MainAnotaciones {
+public class MainJavaConfig {
 
-	private static ApplicationContext context;
+	public static ApplicationContext context;
 	
 	public static void main(String[] args) {		
-		context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		//Hasta ahora siempre hemos dado de alta el contexto mediante XML
+		//context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		//No es obligatorio tener fichero XML ni dar de alta el contexto mediante
+		//XML. Podemos dar de alta el contexto a partir de una clase, donde
+		//establezcamos la configuracion
+		
+		context = 
+				new AnnotationConfigApplicationContext(ConfiguracionSpring.class);		
 		
 		Scanner sc = new Scanner(System.in);
 		String continuar = "s";
