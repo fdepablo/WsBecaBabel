@@ -1,0 +1,26 @@
+Ejercicio de hacer un CRUD contra bbdd de la entidad cliente y pedido.La 
+
+El pedido tendra los siguientes datos
+id
+importe
+fecha
+
+El cliente tendra los siguientes datos
+id
+nombre
+edad
+pedido/listaPedidos
+
+La funcionalidad será la siguiente:
+
+Tendremos un menu que haga lo siguinte:
+
+1. Alta cliente
+2. Borra cliente
+3. Modificar cliente
+4. buscar cliente por nombre
+5. Buscar cliente por id
+6. Añadir pedido a cliente por id
+7. listar pedidos de cliente por id
+
+

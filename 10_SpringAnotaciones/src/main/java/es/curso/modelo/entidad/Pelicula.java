@@ -29,7 +29,7 @@ public class Pelicula {
 	//@Value("18")
 	@Value("#{ T(java.lang.Math).random()  * 50.0 }")
 	private int edad;
-	
+		
 	public Pelicula() {
 
 	}

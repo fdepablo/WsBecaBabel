@@ -24,6 +24,7 @@ public class MainAnotacionesPrueba {
 		
 		Pelicula pelicula = context.getBean("pelicula",Pelicula.class);
 		System.out.println(pelicula);
+		
 	}
 
 }
