@@ -4,7 +4,7 @@ import java.util.List;
 
 import es.curso.modelo.entidad.Pelicula;
 
-public interface PeliculaDAO {
+public interface DaoPelicula {
 	
 	int insertar(Pelicula p);	
 	Pelicula modificar(Pelicula p);	

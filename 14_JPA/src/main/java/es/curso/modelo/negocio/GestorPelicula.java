@@ -7,13 +7,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import es.curso.modelo.entidad.Pelicula;
-import es.curso.modelo.persistencia.PeliculaDaoJPA;
+import es.curso.modelo.persistencia.DaoPeliculaJPA;
 
 @Service
 public class GestorPelicula {
 	
 	@Autowired
-	private PeliculaDaoJPA peliculaDao;
+	private DaoPeliculaJPA peliculaDao;
 	
 	//Con esta anotacion le decimos a spring que todas las acciones que se hagan
 	//en bbdd sean transaccionales. Son obligatorias en aquellas acciones

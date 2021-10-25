@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import es.curso.modelo.entidad.Pelicula;
 
 @Repository
-public class PeliculaDaoJPA implements PeliculaDAO {
+public class DaoPeliculaJPA implements DaoPelicula {
 
 	//Para inyectarle el objeto entity manager no podemos usar la anotacion
 	//@Autowired ya que no hay un objeto de tipo EntityManager en mi contexto
