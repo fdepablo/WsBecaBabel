@@ -1,7 +1,5 @@
 package es.curso.modelo.entidad;
 
-import java.io.Serializable;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
@@ -9,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope("prototype")
-public class Pelicula implements Serializable{
+public class Pelicula{
 	private int id;
 	private String titulo;
 	private String genero;

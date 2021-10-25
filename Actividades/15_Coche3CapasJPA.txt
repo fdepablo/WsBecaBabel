@@ -1,0 +1,30 @@
+Ejercicio de hacer un CRUD contra bbdd de la entidad coche pero usando JPA.
+
+Se mostrará un menu para hacer el CRUD
+La aplicacion mostrará 5 opciones del CRUD.
+
+El coche va a tener los siguientes atributos
+matricula;
+marca;
+modelo;
+kilometros;
+
+Se pide(IMPORTANTE) hacer el modelo de 3 capas que hemos visto,
+con el nombre adecuado de los paquetes y de las clases.
+
+Como reglas de negocio nos dices que:
+1. Las matriculas tienen que tener 7 caracteres
+2. La marca, el modelo y la matricula no pueden estar vacios
+
+Negocio debería de proporcionar a la vista una respueta adecuada
+para cada una de las reglas de negocio que no se han cumplido.
+
+Subirlo al Github como proyecto Ej04CocheCapas
+
+
+
+
+
+
+
+
