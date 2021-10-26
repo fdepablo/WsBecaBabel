@@ -2,6 +2,7 @@ package es.curso.main;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -50,7 +51,22 @@ public class MainJPAData {
 		gp.save(p);
 		
 		System.out.println("**** BUSCAR PELICULA ****");
-		System.out.println(gp.findById(p.getId()));
+		//El metodo FindById me devuelve un optional.
+		//Un optional es un tipo de dato que salio en Java8. Este objeto la finalidad
+		//es hacer de envoltorio de otros objetos y sirve para prevenir objetos
+		//que apunten a null
+		//Un optional en este caso nunca va a ser null, puede que dentro del optional apuntemos
+		//a null (en caso de que el Id que busquemos NO EXISTA), pero el optional 
+		//que nos devuelve el metodo nunca sera nulo
+		Optional<Pelicula> optionalPelicula = gp.findById(p.getId());
+		//Podemos preguntar si el optional tiene valor
+		if(optionalPelicula.isPresent()) {
+			//Desenvolvemos el objeto que esta dentro del optional
+			Pelicula pAux = optionalPelicula.get();
+			System.out.println(pAux);
+		}else {
+			System.out.println("No se ha encontrado la pelicula con ese ID");
+		}		
 		
 		System.out.println("**** INSERTANDO PELICULA ****");
 		Pelicula p2 = new Pelicula();
@@ -68,11 +84,43 @@ public class MainJPAData {
 		lista.forEach((v) -> System.out.println(v));
 		
 		System.out.println("**** BORRAR PELICULA ****");
-		gp.deleteById(1);
+		gp.deleteById(2);
 		//gp.delete(p2);
 		
 		System.out.println("**** LISTAR PELICULA ****");
 		lista = gp.findAll();
+		lista.forEach((v) -> System.out.println(v));
+		
+		System.out.println("**** LISTAR POR DIRECTOR ****");
+		p = context.getBean("pelicula",Pelicula.class);
+		p.setTitulo("El retorno del yedi");
+		p.setGenero("Ciencia Ficcion");		
+		p.setDirector("George Lucas");
+		p.setYear(1985);
+		p.setFechaAlta(new Date());
+		gp.save(p);
+		
+		lista = gp.findByDirector("George Lucas");
+		lista.forEach((v) -> System.out.println(v));
+		
+		System.out.println("**** LISTAR POR DIRECTOR Y GENERO****");
+		
+		lista = gp.findByDirectorAndGenero("George Lucas", "Scifi");
+		lista.forEach((v) -> System.out.println(v));
+		
+		System.out.println("**** LISTAR POR TITULO ASCENDENTE****");
+		
+		lista = gp.findAllByOrderByTituloAsc();
+		lista.forEach((v) -> System.out.println(v));
+		
+		System.out.println("**** LISTAR POR TITULO DESCENDENTE****");
+		
+		lista = gp.findAllByOrderByTituloDesc();
+		lista.forEach((v) -> System.out.println(v));
+		
+		System.out.println("**** LISTAR POR TITULO QUE CONTENGA 'EL'***");
+		
+		lista = gp.findByTituloContaining("El");
 		lista.forEach((v) -> System.out.println(v));
 		
 	}

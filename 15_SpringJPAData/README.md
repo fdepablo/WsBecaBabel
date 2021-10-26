@@ -33,5 +33,5 @@ Tambien el Dao sería diferente.
 
 ## Bibliografia
 
-[https://spring.io/projects/spring-data-jpa](https://spring.io/projects/spring-data-jpa) 
-[https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)
+- [https://spring.io/projects/spring-data-jpa](https://spring.io/projects/spring-data-jpa) 
+- [https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)
