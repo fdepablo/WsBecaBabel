@@ -1,4 +1,4 @@
-package es.curso.modelo.entidades;
+package es.curso.modelo.entidad;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

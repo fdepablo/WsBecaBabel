@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import es.curso.config.Configuracion;
-import es.curso.modelo.entidades.Pelicula;
+import es.curso.modelo.entidad.Pelicula;
 import es.curso.modelo.negocio.GestorPelicula;
 
 public class MainJdbcTemplate {

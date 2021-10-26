@@ -2,7 +2,7 @@ package es.curso.modelo.persistencia;
 
 import java.util.List;
 
-import es.curso.modelo.entidades.Pelicula;
+import es.curso.modelo.entidad.Pelicula;
 
 public interface DaoPelicula {
 	

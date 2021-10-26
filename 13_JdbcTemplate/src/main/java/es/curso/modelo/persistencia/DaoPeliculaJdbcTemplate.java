@@ -7,7 +7,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import es.curso.modelo.entidades.Pelicula;
+import es.curso.modelo.entidad.Pelicula;
 
 @Repository
 public class DaoPeliculaJdbcTemplate implements DaoPelicula {

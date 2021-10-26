@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import es.curso.modelo.entidades.Pelicula;
+import es.curso.modelo.entidad.Pelicula;
 
 /**
  * Esta clase se encarga de conviertir automatimente los registros devueltos
