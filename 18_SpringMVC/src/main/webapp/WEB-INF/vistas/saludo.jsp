@@ -8,20 +8,12 @@
 </head>
 <body>
 
-	<h1>Saludo</h1>
+	<h1>Pagina de los Saludos</h1>
 	
-	<h1>${saludo}</h1>
-	<h1 style="color:red">${persona.nombre}</h1>
+	<h2 style="color:green">Atributo saludo: ${saludo}</h2>
+	<h2 style="color:red">Nombre del objeto persona: ${persona.nombre}</h2>	
+	<h2 style="color:blue">Lista de saludos: ${listaSaludos}</h2>
 	
-	<h1 style="color:blue">${listaSaludos}</h1>
-	<!-- Podemos acceder directamente a un objeto de session 
-		si hemos declarado la session como @Scope("session")
-	-->
-	<h1 style="color:blue">${saludos.listaSaludos}</h1>
-	<!-- De manera clasica, ya que el nombre incluye un '.' hay que hacerlo
-	con corchetes
-	<h1 style="color:blue">${sessionScope["scopedTarget.saludo"].listaSaludos}</h1>
-	-->
 	<a href="verFormularioSaludo">Volver</a>
 </body>
 </html>

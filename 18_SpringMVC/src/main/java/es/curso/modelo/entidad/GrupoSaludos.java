@@ -11,9 +11,8 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.annotation.SessionScope;
 
 @Component
-//@Scope("session")
 @SessionScope
-public class Saludo {
+public class GrupoSaludos {
 	private List<String> listaSaludos = new ArrayList<>();
 
 	public List<String> getListaSaludos() {

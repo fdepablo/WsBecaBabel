@@ -38,11 +38,4 @@
 		<property name="prefix" value="/WEB-INF/vistas/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
-	
-	<!-- 
-    <property name="exposeContextBeansAsAttributes" value="true" />
-    sirve para poder usar los beans declarados en spring en los jsps
-	-->
-
-
 </beans>

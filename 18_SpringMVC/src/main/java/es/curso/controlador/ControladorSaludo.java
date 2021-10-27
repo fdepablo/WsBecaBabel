@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import es.curso.modelo.entidad.Persona;
-import es.curso.modelo.entidad.Saludo;
+import es.curso.modelo.entidad.GrupoSaludos;
 
 //Para dar de alta un controlador  y que FrontController sepa localizarlo
 //usaremos la anotacion @Controller
@@ -21,7 +21,10 @@ import es.curso.modelo.entidad.Saludo;
 public class ControladorSaludo {
 	
 	@Autowired
-	private Saludo saludoSession;
+	private GrupoSaludos grupoSaludosSession;
+	
+	@Autowired
+	private Persona persona;
 	
 	//Mediante la anotacion @RequestMapping (que es propia de MVC) podemos
 	//mapear URLs
@@ -31,13 +34,12 @@ public class ControladorSaludo {
 		//la direccion "/WEB-INF/vistas/formularioSaludo.jsp"
 		return "formularioSaludo";
 	}
-	
-	
+		
 	//Podemos en la anotacion @RequestMapping restringir el acceso al metodo
 	//que queramos.
 	
 	//A los metodos anotados con anotaciones de SpringWeb podemos pasarle
-	//por parametro muchos tipos de objetos.
+	//por parametro muchos tipos de objetos. Entre ellos:
 	
 	//1. Si anotamos un parametro de entrada con @RequestMapping, Spring
 	//buscara un parametro con ese nombre para inyectarlo
@@ -60,29 +62,26 @@ public class ControladorSaludo {
 		System.out.println(nombre);
 		
 		//Aqui irian las llamadas a los servicios o gestores
-		Persona p = new Persona();
-		p.setNombre(nombre);
+		//....
+		//...
 		
-		//podriamos acceder así a la lista, siempre y cuando 
-		//hayamos creado la sesion como @Scope("session") NO como @SessionScope
-		//((Saludos)session.getAttribute("saludos")).getListaSaludos().add(saludo);
-		//pero es mas comodo si lo inyectamos con @Autowired
-		saludoSession.getListaSaludos().add(saludo);
+		persona.setNombre(nombre);
 		
-		System.out.println("Saludo session autowired " + saludoSession.getListaSaludos());
-		//System.out.println("Saludo session de toda la vida " + ((Saludo)session.getAttribute("scopedTarget.saludo")).getListaSaludos());
+		//Accedemos a la session inyectada por autowired
+		grupoSaludosSession.getListaSaludos().add(saludo);
 		
-		//Aqui le estamos mandando directamente a un controlador (el de más abajo)
-		//en vez de pasar por el viewResolver.
+		System.out.println("Saludos session autowired: " + grupoSaludosSession.getListaSaludos());
+		//System.out.println("Saludo session de toda la vida " + ((Saludo)session.getAttribute("scopedTarget.grupoSaludos")).getListaSaludos());
+		
 		//Siempre que hagamos un redirect, no usaremos el view resolver de 
 		//Spring, si no que mandaremos una peticion 300 a nuestro navegador
 		//para que vaya a la URL que le mandemos.
+		//Aqui le estamos mandando directamente a un controlador (el de más abajo)
+		//en vez de pasar por el viewResolver.
 		mav.setViewName("redirect:verSaludos");
-		//ya que estamos haciendo un redirect, el nombre que metemos
-		//en el objeto mav se va a mandar como parametro
-		//de la request. Si no hicieramos un redirect, el nombre se guardaria en el 
-		//objeto request
-		mav.addObject("nombre",saludo);
+		//Ya que estamos haciendo un redirect, el nombre que metemos
+		//en el objeto mav se va a mandar como parametros de la request. 
+		mav.addObject("nombre",nombre);
 		return mav;
 	}
 	
@@ -91,12 +90,11 @@ public class ControladorSaludo {
 	public String mostrarSaludos(
 			@RequestParam("nombre") String nombre,
 			Model model) {
-		//Como pasar datos del controlador a la vista
-		Persona p = new Persona();
-		p.setNombre(nombre);
+		persona.setNombre(nombre);
 		
-		model.addAttribute("persona", p);
-		model.addAttribute("listaSaludos", saludoSession.getListaSaludos());
+		//Vamos a pasar datos del controlador a la vista
+		model.addAttribute("persona", persona);
+		model.addAttribute("listaSaludos", grupoSaludosSession.getListaSaludos());
 		model.addAttribute("saludo", nombre);
 		return "saludo";
 	}
