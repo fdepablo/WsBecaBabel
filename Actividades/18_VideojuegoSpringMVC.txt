@@ -1,0 +1,29 @@
+Ejercicio con SpringMVC
+
+La primera pagina de nuestra app nos mostrara un login para acceder
+a ella. Pedira un usuario y un password y deberan coincidir. No quiero
+que hagais bbdd, todo simulado como lo he hecho yo.
+
+Si el usuario exite nos mostrara una pagina en la que se listaran una serie
+de videojuegos. El videojuego tendra:
+
+id
+nombre
+compañia
+nota media
+
+Dentro de esta pagina nos mostrará tambien un formulario para del detalle
+del videojuego a partir de un id. 
+
+Si el videojuego existe nos mostrara una pagina donde se mostrará
+
+id 
+nombre
+compañia
+nota media
+nombre del creador
+Un enlace a la pagina web oficial
+
+Si el videojugo no exite, se volvera a redireccionar a la misma pagina
+pero se mostrará un mensaje diciendo que "No existe el videojuego"
+
