@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<!-- Aqui podriamos empezar a dar de alta todos nuestro beans -->
+	
+	<!-- Esto es para que spring busque las anotaciones propias del context 
+		(@Service, @Component, etc). La busqueda es en el paquete que pongamos
+		y en los paquetes hijos -->
+	<context:component-scan
+		base-package="es.curso" />
+
+	<!-- Es importante ademas que le digamos a Spring que busque anotaciones de 
+		Spring MVC -->
+	<mvc:annotation-driven />
+
+	<!-- 
+		
+		Por ultimo configuramos nuestro objeto ViewResolver 
+		Este objeto sera el encargado de relacionar las respuestas de nuestros
+		controladores con las vista
+		
+		La configuracioni minima sería darle un prefijo y un sufijo
+		
+		En este caso vamos add a la respuesta del contrador el sufijo y el
+		prefijo configurado.
+		
+		Por ejemplo, si el controlador me devuelve "inicio", la pagina que se
+		buscara estara en "/WEB-INF/vistas/inicio.jsp"
+	-->
+	<bean id="viewResolverJSP"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/vistas/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<mvc:resources mapping="/img/**"
+		location="/WEB-INF/img/" />	
+	
+	<bean id="usuario1" class="es.curso.babel.model.entity.Usuario">
+		<property name="username" value="Tony"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+	
+	<bean id="usuario2" class="es.curso.babel.model.entity.Usuario">
+		<property name="username" value="Steve"></property>
+		<property name="password" value="4321"></property>
+	</bean>
+	
+	<bean id="listaUsuariosMarvel" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="es.curso.babel.model.entity.Usuario">
+				<ref bean="usuario1"/>
+				<ref bean="usuario2"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="videojuego1" class="es.curso.babel.model.entity.Videojuego">
+		<property name="id" value="1"></property>
+		<property name="imagen" value="imagen1.jpg"></property>
+		<property name="nombre" value="Dark Soul 1"></property>
+		<property name="compania" value="From Software"></property>
+		<property name="nota" value="9"></property>
+		<property name="author" value="Hidetaka Miyazak"></property>
+	</bean>
+	
+	<bean id="videojuego2" class="es.curso.babel.model.entity.Videojuego">
+		<property name="id" value="2"></property>
+		<property name="imagen" value="imagen2.jpg"></property>
+		<property name="nombre" value="Dark Soul 2"></property>
+		<property name="compania" value="From Software"></property>
+		<property name="nota" value="7.5"></property>
+		<property name="author" value="Hidetaka Miyazak"></property>
+	</bean>
+	
+	<bean id="videojuego3" class="es.curso.babel.model.entity.Videojuego">
+		<property name="id" value="3"></property>
+		<property name="imagen" value="imagen3.jpg"></property>
+		<property name="nombre" value="Dark Soul 3"></property>
+		<property name="compania" value="From Software"></property>
+		<property name="nota" value="9"></property>
+		<property name="author" value="Hidetaka Miyazak"></property>
+	</bean>
+	
+	<bean id="videojuego4" class="es.curso.babel.model.entity.Videojuego">
+		<property name="id" value="4"></property>
+		<property name="imagen" value="imagen4.jpg"></property>
+		<property name="nombre" value="Sekiro"></property>
+		<property name="compania" value="From Software"></property>
+		<property name="nota" value="8"></property>
+		<property name="author" value="Hidetaka Miyazak"></property>
+	</bean>
+	
+	<bean id="listaVideojuegosSoul" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="es.curso.babel.model.entity.Videojuego">
+				<ref bean="videojuego1"/>
+				<ref bean="videojuego2"/>
+				<ref bean="videojuego3"/>
+				<ref bean="videojuego4"/>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>
