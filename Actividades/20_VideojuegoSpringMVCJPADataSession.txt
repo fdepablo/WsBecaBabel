@@ -1,0 +1,48 @@
+Ejercicio con SpringMVC con JPA
+
+La primera pagina de nuestra app nos mostrara un login para acceder
+a ella. Pedira un usuario y un password y deberan coincidir. No quiero
+que hagais bbdd, todo simulado como lo he hecho yo.
+
+Si el usuario exite nos mostrara una pagina en la que se listaran una serie
+de videojuegos. El videojuego tendra:
+
+id
+nombre
+compañia
+nota media
+
+Dentro de esta pagina nos mostrará tambien un formulario para del detalle
+del videojuego a partir de un id. 
+
+Si el videojuego existe nos mostrara una pagina donde se mostrará
+
+id 
+nombre
+compañia
+nota media
+nombre del creador
+Un enlace a la pagina web oficial
+(Nuevo atributo) precio
+
+Si el videojugo no exite, se volvera a redireccionar a la misma pagina
+pero se mostrará un mensaje diciendo que "No existe el videojuego"
+
+Además tendremos una pagina para registrar al usuario (dar de alta)
+
+Tambien podremos dar de alta videojuegos, dar de baja videojuegos por id y
+modificar videojuegos
+
+Quiero que hagamos validaciones usando javax.validation
+
+Vamos a implementar un carrito de la compra en session del usuario
+
+El usuario podra elegir a partir de los videojuegos que esten dados
+de alta videojuegos para comprar que se añadiran a la una lista de videojuegos
+
+Una vez elegidos los videojuegos el usuario podra ir a una pagina compra donde
+se mostran los videojuegos que a elegido y el precio total. Si pulsa pagar
+se confirmara la compra y se vaciara la lista de videojugos del carrito.
+
+Seria interesante que el usuario tenga que estar loguedo para hacer las operaciones
+
