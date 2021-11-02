@@ -1,4 +1,4 @@
-Ejercicio de hacer un CRUD contra bbdd de la entidad coche pero usando Spring JPaData.
+Ejercicio de hacer un CRUD contra bbdd de la entidad coche pero usando SpringBoot JPaData.
 
 Se mostrará un menu para hacer el CRUD
 La aplicacion mostrará 5 opciones del CRUD.
@@ -19,7 +19,12 @@ Como reglas de negocio nos dices que:
 Negocio debería de proporcionar a la vista una respueta adecuada
 para cada una de las reglas de negocio que no se han cumplido.
 
-Subirlo al Github como proyecto Ej16CocheCapasJPAData
+Subirlo al Github como proyecto Ej20CocheCapasJPADataSpringBoot
+
+Consideraciones
+
+1. Meter la interfaz CommadLineRunner
+2. Probar a hacerlo con una base de datos hecha en memoria y otra Real
 
 
 
