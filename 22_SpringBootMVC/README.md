@@ -2,6 +2,8 @@
 
 Este proyecto se ha hecho a partir del ejemplo SpringMVCPeliculasUsuariosJpaData pero con Spring Boot
 
+La base de datos sera h2 y se cargara en memoria.
+
 ## Creacion del proyecto con Spring Boot
 
 Para crear este ejemplo debemos de crear un proyecto spring boot pero como enpaquetado elegimos <b>war</b> en vez de jar. Luego añadiremos tres starter, uno seria el de Spring JPA data, otro seria Spring Web y el otro sería la base de datos H2.
@@ -44,6 +46,7 @@ Tambien podemos modificar el puerto de arranque del Tomcat
 
 	server.port=8080
 	
+Para este ejemplo debemos de anotar los DAOs obligatoriamente con la anotacion @Repository
 
 ## Poner en marcha la aplicacion
 
