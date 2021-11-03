@@ -1,59 +1,38 @@
-package basico;
+package modelo.entidad;
 
+import javax.persistence.Embeddable;
+
+//Aqui le decimos que esta clase no va a ser entidad propia
+//por ello no la anotamos con @Entity, sino que sus atributos
+//van a formar parte de los campos de otra tabla, en este caso
+//formara parte de la tabla Cliente
+@Embeddable
 public class Direccion {
 	private String tipoVia;
 	private String nombreVia;
 	private String ciudad;
-	private String cp;
 	
-	//Bidreccinalidad
-	/*
-	private Persona persona;
-
-	public Persona getPersona() {
-		return persona;
-	}
-
-	public void setPersona(Persona persona) {
-		this.persona = persona;
-	}*/
-
 	public String getTipoVia() {
 		return tipoVia;
 	}
-
 	public void setTipoVia(String tipoVia) {
 		this.tipoVia = tipoVia;
 	}
-
 	public String getNombreVia() {
 		return nombreVia;
 	}
-
 	public void setNombreVia(String nombreVia) {
 		this.nombreVia = nombreVia;
 	}
-
 	public String getCiudad() {
 		return ciudad;
 	}
-
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
 	}
-
-	public String getCp() {
-		return cp;
-	}
-
-	public void setCp(String cp) {
-		this.cp = cp;
-	}
-
+	
 	@Override
 	public String toString() {
-		return "Direccion [tipoVia=" + tipoVia + ", nombreVia=" + nombreVia + ", ciudad=" + ciudad + ", cp=" + cp + "]";
-	}
-	
-	
+		return "Direccion [tipoVia=" + tipoVia + ", nombreVia=" + nombreVia + ", ciudad=" + ciudad + "]";
+	}	
 }

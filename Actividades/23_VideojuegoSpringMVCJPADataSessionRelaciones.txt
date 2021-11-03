@@ -1,4 +1,4 @@
-Ejercicio con SpringMVC con JPA
+Ejercicio con Spring boot con JPA y relaciones segun el dibujo
 
 La primera pagina de nuestra app nos mostrara un login para acceder
 a ella. Pedira un usuario y un password y deberan coincidir. 
@@ -45,3 +45,7 @@ se confirmara la compra y se vaciara la lista de videojugos del carrito.
 
 Seria interesante que el usuario tenga que estar loguedo para hacer las operaciones
 
+Ademas queremos persisitir todas las compras de videijuegos que hagan lo susuarios
+Para ello habra que crear un modelo de datos como en el dibujo.
+
+Habra una opcion de consultar los pedidos que haya hecho el usuario

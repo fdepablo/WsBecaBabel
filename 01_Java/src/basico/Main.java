@@ -57,6 +57,8 @@ public class Main {
 		p3.setDireccion(d1);
 		p3.getDireccion().setCiudad("New York");
 		p3.getDireccion().setCp("09876");
+		//bidireccionalidad
+		//d1.setPersona(p3);
 		
 		System.out.println(p3);
 		
