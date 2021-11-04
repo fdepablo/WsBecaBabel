@@ -1,0 +1,12 @@
+Implementar un servicio REST de los videojuegos.
+
+El servicio REST tendrá que proporcinar la siguiente funcionalidad.
+
+1- CRUD
+2- Listado
+3- Listado por nombre y por compañia
+4- Que te proporcione el precio de todos los videojuegos que esten dados
+de alta. Que nos devuelva un json con los precios de los videojuegos y 
+la suma total de todos los videojuegos.
+
+Usar JPA-DATA, etc.
