@@ -88,16 +88,17 @@ public class Application implements CommandLineRunner{
 		
 		System.out.println("********* MODIFICAR PERSONA *************");	
 		Persona pModificar = new Persona();
+		pModificar.setId(pAlta.getId());
 		pModificar.setNombre("Obelix");
 		pModificar.setApellido("El del menhir");
 		pModificar.setEdad(40);
 		boolean modificada = spp.modificar(pModificar);
 		System.out.println("run -> persona modificada? " + modificada);
 		
-		System.out.println("********* MODIFICAR PERSONA ERRONEA*************");			
+		System.out.println("********* MODIFICAR PERSONA ERRONEA*************");	
+		pModificar.setId(20);
 		pModificar.setNombre("Panoramix");
 		pModificar.setApellido("El de la pocion magica");
-		pModificar.setId(20);
 		modificada = spp.modificar(pModificar);
 		System.out.println("run -> persona modificada? " + modificada);
 		
