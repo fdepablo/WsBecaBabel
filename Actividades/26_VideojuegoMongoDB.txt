@@ -1,0 +1,3 @@
+Probar a crear una base de datos en mongo db con los videojuegos
+
+En alguna aplicacion sencilla, meter en vez de MySql, meter mongo
